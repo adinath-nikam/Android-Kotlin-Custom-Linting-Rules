@@ -1,0 +1,17 @@
+plugins {
+    id 'java-library'
+    id 'org.jetbrains.kotlin.jvm'
+}
+
+dependencies {
+    compileOnly("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+    var lintVersion = "30.4.1"
+
+    compileOnly("com.android.tools.lint:lint-api:${lintVersion}")
+    compileOnly("com.android.tools.lint:lint-checks:${lintVersion}")
+
+    testImplementation("com.android.tools.lint:lint:${lintVersion}")
+    testImplementation("com.android.tools.lint:lint-tests:${lintVersion}")
+
+    testImplementation("junit:junit:4.13.2")
+}
